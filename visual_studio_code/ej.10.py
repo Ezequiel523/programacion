@@ -1,7 +1,18 @@
-num1 = float(input("Ingrese el primer número: "))
-num2 = float(input("Ingrese el segundo número: "))
-if num2 != 0:
-    division = num1 / num2
-    print("El resultado de la división es:", division)
-else:
-    print("Error: no se puede dividir entre cero.")
+numVeces = 9999
+longitudLista = 15
+while numVeces > longitudLista:
+    numVeces = int(input("dame el numero de veces a rotar: "))
+
+lista = []
+for i in range(longitudLista):
+    numero = int(input("dame el numero: "))
+    lista.append(numero)
+print(lista)
+listaSalida = []
+listaDetras = lista[0:len(lista)-numVeces]
+print(listaDetras)
+for posicion in range(1, numVeces,+1):
+    elemento = lista[len(lista)-posicion]
+    listaSalida.insert(0 ,elemento)
+listaSalida = listaSalida + listaDetras
+print(listaSalida)
