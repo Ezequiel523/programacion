@@ -1,0 +1,1 @@
+print("El resultado es", 37/5)
